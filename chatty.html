@@ -1,0 +1,27 @@
+<head>
+  <title>Chatty</title>
+</head>
+
+<body>
+  <div id="content">
+    <h1>Chatty &ndash; Baby's First Meteor.js App</h1>
+    {{> entry}}
+    {{> messages}}
+  </div>
+</body>
+
+<template name="entry">
+  <p><input type="text" id="name" placeholder="Your Name" /> <input type="text" id="messageBox" placeholder="Your Message" /></p>
+</template>
+
+<template name="messages">
+<div id="convo">
+    {{#each messages}}
+      {{> message}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="message">
+  <div class="line"><div class="nayme">{{name}}</div><div class="maysage">{{message}}</div></div>
+</template>
